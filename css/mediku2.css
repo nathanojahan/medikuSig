@@ -1,0 +1,46 @@
+body {
+    padding: 40px 0px;   
+	background-color: rgba(62, 211, 222, 0.7);
+}
+
+.glyphicon .glyphicon-plus{
+	color: white;
+	width: 200px;
+	height: 200px;
+	margin-top: 30%;
+}
+
+#margin_top{
+    margin-top:30%;
+	font-size:50px;
+	color: white;
+	font-style: bold;
+}
+#welcome_msg{
+	font-style:italic;
+	color: white;
+	font-size: 40px;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+	padding: 5px;
+	font-size: 25px;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+.navbar{
+	background-color: rgba(62, 211, 222, 1);
+}
+.navbar-brand{
+	color: white;
+	font-size: 20px;
+}
+
+
