@@ -1,46 +1,86 @@
 body {
     padding: 40px 0px;   
-	background-color: rgba(62, 211, 222, 0.7);
+    background-color: gray;
 }
 
 .glyphicon .glyphicon-plus{
-	color: white;
-	width: 200px;
-	height: 200px;
-	margin-top: 30%;
+    color: white;
+    width: 200px;
+    height: 200px;
+    margin-top: 30%;
 }
 
 #margin_top{
     margin-top:30%;
-	font-size:50px;
-	color: white;
-	font-style: bold;
+    font-size:50px;
+    color: white;
+    font-style: bold;
 }
 #welcome_msg{
-	font-style:italic;
-	color: white;
-	font-size: 40px;
+    font-style:italic;
+    color: white;
+    font-size: 40px;
 }
 .stylish-input-group .input-group-addon{
     background: white !important; 
 }
 .stylish-input-group .form-control{
-	border-right:0; 
-	box-shadow:0 0 0; 
-	border-color:#ccc;
-	padding: 5px;
-	font-size: 25px;
+    border-right:0; 
+    box-shadow:0 0 0; 
+    border-color:#ccc;
+    padding: 5px;
+    font-size: 25px;
 }
 .stylish-input-group button{
     border:0;
     background:transparent;
 }
-.navbar{
-	background-color: rgba(62, 211, 222, 1);
+.navbar{        
+    background-color:#c62828;
+    height: 80px;
 }
 .navbar-brand{
-	color: white;
-	font-size: 20px;
+    color: white;
+    font-size: 30px;    
 }
 
+.navbar-header{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: fantasy;
+    font-size: 28px;
+    color: white;
+}
 
+#kanan{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    font-family: fantasy;
+    font-size: 18px;
+    color: white;
+}
+
+#search-box{
+    margin-top: 80px;
+    float: top;
+}
+
+.home{
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+.sidebar{
+    width: 20%;
+}
+
+.map{
+    width:80%;
+}
+.map-canvas{
+    width:20%;
+}
