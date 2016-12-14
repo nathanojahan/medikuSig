@@ -308,9 +308,8 @@
                         var distance = tmp.routes[0].legs[0].distance.text;
                         var duration = tmp.routes[0].legs[0].duration.text;
                         console.log(distance, duration)
-                        var dvDistance = document.getElementById("dvDistance");
-                        dvDistance.innerHTML = "";
-                        dvDistance.innerHTML += "<div style='length:100%;background-color:white;font-size: 19px;padding:15px'><h1>Info</h1><h2>Distance : " + distance + "</h2><h2>Duration : " + duration + "</h2></div>";
+                        var dvDistance = document.getElementById("dvPanel");                        
+                        dvDistance.innerHTML += "<div style='length:100%;background-color:white;font-size: 19px;padding:10px'><h3>Distance : " + distance + "</h3><h3>Duration : " + duration + "</h3></div>";
                     } else {
                         window.alert('Directions request failed due to ' + status);
                     }
