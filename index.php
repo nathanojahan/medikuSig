@@ -1,153 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Mediku</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mediku</title>
 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/mediku2.css" rel="stylesheet">
-        <style>
-            #map {
-                height: 100%;
-            }
-            /* Optional: Makes the sample page fill the window. */
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            .controls {
-                margin-top: 10px;
-                border: 2px solid transparent;
-                border-radius: 2px 0 0 2px;
-                box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                height: 40px;
-                outline: none;
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            }
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mediku2.css" rel="stylesheet">
+    <style>
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .controls {
+            margin-top: 10px;
+            border: 2px solid transparent;
+            border-radius: 2px 0 0 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            height: 40px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
 
-            #pac-input {
-                background-color: #fff;
-                font-family: Roboto;
-                font-size: 18px;
-                font-weight: 300;
-                margin-left: 12px;
-                padding: 0 11px 0 13px;
-                text-overflow: ellipsis;
-                width: 300px;
-            }
+        #pac-input {
+            background-color: #fff;
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 300;
+            margin-left: 12px;
+            padding: 0 11px 0 13px;
+            text-overflow: ellipsis;
+            width: 300px;
+        }
 
-            #pac-input:focus {
-                border-color: #4d90fe;
-            }
+        #pac-input:focus {
+            border-color: #4d90fe;
+        }
 
-            .pac-container {
-                font-family: Roboto;
-            }
+        .pac-container {
+            font-family: Roboto;
+        }
 
-            #type-selector {
-                color: #fff;
-                background-color: #4d90fe;
-                padding: 5px 11px 0px 11px;
-            }
+        #type-selector {
+            color: #fff;
+            background-color: #4d90fe;
+            padding: 5px 11px 0px 11px;
+        }
 
-            #type-selector label {
-                font-family: Roboto;
-                font-size: 13px;
-                font-weight: 300;
-            }
-            #target {
-                width: 345px;
-            }
-        </style>
+        #type-selector label {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+        }
+        #target {
+            width: 345px;
+        }
+    </style>
 
 
-    </head>
-    <body>
+</head>
+<body>
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
-        <div class="container">
-            <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-                <div class="container-fluid">
-                    <div class="navbar-header col-md-12">
-                        <div class="col-md-4">
-                            <label><img src="assets/medikuLogo.png" style="height: 50px"/>  Mediku </label>                            
-                        </div>
-                        <div class="col-md-3">                          
-                        </div>                       
-                        <div class="col-md-5" id="kanan">
-                            <label>Tugas Akhir Sistem Informasi Geografis People Power</label>                       
-                        </div>
-
+    <div class="container">
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header col-md-12">
+                    <div class="col-md-4">
+                        <label><img src="assets/medikuLogo.png" style="height: 50px"/>  Mediku </label>                            
+                    </div>
+                    <div class="col-md-3">                          
+                    </div>                       
+                    <div class="col-md-5" id="kanan">
+                        <label>Tugas Akhir Sistem Informasi Geografis People Power</label>                       
                     </div>
 
                 </div>
-            </nav>
-
-        </div>
-        <div class="home">
-            <div class="sidebar">
-                <div id="search-box">
-                    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-                </div>
-            </div>
-
-            <div id="map">
 
             </div>
-            <div id="map-canvas"></div>
+        </nav>
+
+    </div>
+    <div class="home">
+        <div class="sidebar">
+            <div id="search-box">
+                <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            </div>
         </div>
 
+        <div id="map">
 
-        <script>
-            var global;
-            var startLat;
-            var startLong;
-            var map;
-            function initAutocomplete() {
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: -6.4025, lng: 106.7942},
-                    zoom: 16,
-                    mapTypeId: 'roadmap'
-                });
+        </div>
+        <div id="map-canvas"></div>
+    </div>
 
-                var opt = {minZoom: 15, maxZoom: 17};
-                map.setOptions(opt);
-                var infoWindow = new google.maps.InfoWindow({map: map});
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function (position) {
-                        var pos = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude
-                        };
-                        global = position.coords.latitude + "," + position.coords.longitude;
-                        startLat = position.coords.latitude;
-                        startLong = position.coords.longitude;
-                        console.log(global);
-                        var icons = 'assets/loc64.png';
-                        infoWindow.setPosition(pos);
-                        infoWindow.setContent('Your Location');
-                        map.setCenter(pos);
-                        var marker = new google.maps.Marker({
-                            map: map,
-                            position: pos,
-                            icon: icons,
-                        });
-                    }, function () {
-                        handleLocationError(true, infoWindow, map.getCenter());
+
+    <script>
+        var global;
+        var startLat;
+        var startLong;
+        var map;
+        var tmp;
+        function initAutocomplete() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -6.4025, lng: 106.7942},
+                zoom: 16,
+                mapTypeId: 'roadmap'
+            });
+            var opt = {minZoom: 15, maxZoom: 17};
+            map.setOptions(opt);
+            var infoWindow = new google.maps.InfoWindow({map: map});
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    global = position.coords.latitude + "," + position.coords.longitude;
+                    startLat = position.coords.latitude;
+                    startLong = position.coords.longitude;
+                    var icons = 'assets/loc64.png';
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent('Your Location');
+                    map.setCenter(pos);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: pos,
+                        icon: icons,
                     });
-                } else {
+                }, function () {
+                    /*handleLocationError(true, infoWindow, map.getCenter());*/
+                });
+            } else {
                     // Browser doesn't support Geolocation
-                    handleLocationError(false, infoWindow, map.getCenter());
+                    /*handleLocationError(false, infoWindow, map.getCenter());*/
                 }
 
                 $.getJSON("data.json", function (json) {
@@ -155,7 +154,6 @@
                     var i = 0;
                     for (var key in json) {
                         if (json.hasOwnProperty(key)) {
-                            //console.log(json[key]);
                             var icons = 'assets/hsp64.png';
                             var marker = new google.maps.Marker({
                                 map: map,
@@ -166,9 +164,9 @@
                             var geoLng = json[key].geometry.location.lng;
 
                             var content =
-                                    "<div style='width:180px;length:150px'><h4>" + json[key].name + "</h4>\n\
-                                     <p>" + json[key].formatted_address + "</p><p style='text-align:center;color:grey'>" + geoLat + " , " + geoLng +
-                                    "<p style='text-align:center'><button class='btn btn-primary' onclick='directionFunction(" + geoLat + "," + geoLng + ")'>Direction</button></p>";
+                            "<div style='width:180px;length:150px'><h4>" + json[key].name + "</h4>\n\
+                            <p>" + json[key].formatted_address + "</p><p style='text-align:center;color:grey'>" + geoLat + " , " + geoLng +
+                            "<p style='text-align:center'><button class='btn btn-primary' onclick='directionFunction(" + geoLat + "," + geoLng + ")'>Direction</button></p>";
 
                             var infowindow = new google.maps.InfoWindow()
                             infowindow.open();
@@ -198,7 +196,6 @@
                 // more details for that place.
                 searchBox.addListener('places_changed', function () {
                     var places = searchBox.getPlaces();
-
                     if (places.length == 0) {
                         return;
                     }
@@ -216,6 +213,8 @@
                             console.log("Returned place contains no geometry");
                             return;
                         }
+                        startLat = place.geometry.location.lat();
+                        startLong = place.geometry.location.lng();
                         var icon = {
                             url: place.icon,
                             size: new google.maps.Size(71, 71),
@@ -231,7 +230,6 @@
                             title: place.name,
                             position: place.geometry.location
                         }));
-
                         if (place.geometry.viewport) {
                             // Only geocodes have viewport.
                             bounds.union(place.geometry.viewport);
@@ -242,22 +240,23 @@
                     map.fitBounds(bounds);
                 });
             }
+
             function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                 infoWindow.setPosition(pos);
                 infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
+                    'Error: The Geolocation service failed.' :
+                    'Error: Your browser doesn\'t support geolocation.');
             }
 
             function directionFunction(lat, long) {
                 var iconstart = 'assets/loc64.png';
                 var iconfinish = 'assets/hsp64.png';
                 var pointA = new google.maps.LatLng(startLat, startLong),
-                        pointB = new google.maps.LatLng(lat, long),
-                        myOptions = {
-                            zoom: 15,
-                            center: pointA
-                        },
+                pointB = new google.maps.LatLng(lat, long),
+                myOptions = {
+                    zoom: 15,
+                    center: pointA
+                },
                 map = new google.maps.Map(document.getElementById('map'), myOptions),
                         // Instantiate a directions service.
                         directionsService = new google.maps.DirectionsService,
@@ -278,15 +277,16 @@
                             map: map,
                             icon: iconfinish
                         });
-                var opt = {minZoom: 15, maxZoom: 17};
-                map.setOptions(opt);
-                var string = "https://maps.googleapis.com/maps/api/directions/json?origin="+startLat +","+ startLong+"&destination="+lat+","+long+"&key=AIzaSyDgDkjgoAZ7GbKexSSnDtIkBQUrLB6HHXw"
-                console.log(string);
-                $.getJSON("https://maps.googleapis.com/maps/api/directions/json?origin=-6.364554399999999,106.82880499999999&destination=-6.3653017,106.8342797&key=AIzaSyDgDkjgoAZ7GbKexSSnDtIkBQUrLB6HHXw", function (json) {
-                    alert(json);
-                    console.log(json);
-                });
-                
+                        var opt = {minZoom: 15, maxZoom: 17};
+                        map.setOptions(opt);
+                        var string = "https://maps.googleapis.com/maps/api/directions/json?origin="+ startLat +","+ startLong +"&destination="+lat+","+long+"&key=AIzaSyDgDkjgoAZ7GbKexSSnDtIkBQUrLB6HHXw";
+                        
+                        $.getJSON(string, function(data) {
+                            tmp=data;
+                            alert(tmp.routes[0].legs[0].distance.text);
+                            alert(tmp.routes[0].legs[0].duration.text);
+                        });
+
                 // get route from A to B
 
                 calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB);
@@ -309,9 +309,7 @@
 
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgDkjgoAZ7GbKexSSnDtIkBQUrLB6HHXw&libraries=places&callback=initAutocomplete"
-        async defer></script>       
-
-
+        async defer></script>  
     </body>
 
-</html>
+    </html>
