@@ -1,5 +1,5 @@
 body {      
-    background-color: gray;
+    background-color: #1E2832;
 }
 
 .glyphicon .glyphicon-plus{
@@ -95,7 +95,7 @@ a:link, a:visited {
     float:bottom;
     position:absolute;    
     width:24%;          
-    height:20%;
+    height:23%;
 }
 #dvDistance h3{
     font-size: 20px
@@ -106,13 +106,13 @@ a:link, a:visited {
     z-index: 10;  
     position: absolute;  
     right: 0;  
-    top:20%;
+    top:23%;
     float:right; 
     float:bottom;
     position:absolute;    
     width:24%;      
     overflow-y: scroll; 
-    height:80%;
+    height:77%;
 }
 #side{
     visibility: hidden;    
