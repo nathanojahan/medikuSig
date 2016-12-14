@@ -1,5 +1,4 @@
-body {
-    padding: 40px 0px;   
+body {      
     background-color: gray;
 }
 
@@ -85,24 +84,8 @@ a:link, a:visited {
 .map{    
     position: relative;
 }
-.map-canvas{
-    width:20%;
-}
 
-#dvDistance{    
-    z-index: 10;  
-    position: absolute;      
-    right: 0;
-    top:0;   
-    position:absolute;   
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.66);
-    -moz-box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.66);
-    box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.66);
-}
-
-#dvPanel{
-    visibility: hidden;
+#dvDistance{        
     background-color: white;
     z-index: 10;  
     position: absolute;  
@@ -111,19 +94,26 @@ a:link, a:visited {
     float:right; 
     float:bottom;
     position:absolute;    
-    width:20%;      
-    overflow-y: scroll; 
-    height:100%;
+    width:24%;          
+    height:20%;
 }
-.side{
+#dvDistance h3{
+    font-size: 20px
+}
+
+#dvPanel{    
+    background-color: white;
     z-index: 10;  
     position: absolute;  
     right: 0;  
-    top:0;
+    top:20%;
     float:right; 
     float:bottom;
     position:absolute;    
-    width:20%;      
+    width:24%;      
     overflow-y: scroll; 
-    height:100%;
+    height:80%;
+}
+#side{
+    visibility: hidden;    
 }

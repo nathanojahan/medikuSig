@@ -65,8 +65,6 @@
                 width: 345px;
             }
         </style>
-
-
     </head>
     <body>
 
@@ -104,11 +102,11 @@
             <div id="map">                
             </div>
 
-            <div id="side">  
-                <div id="dvDistance">                
+            <div id="side">                  
+                <div id="dvDistance">                    
                 </div>
                 <div id="dvPanel">                
-                </div>
+                </div>                
             </div>
         </div>
         <script>
@@ -123,7 +121,7 @@
                     zoom: 16,
                     mapTypeId: 'roadmap'
                 });
-                var opt = {minZoom: 15, maxZoom: 17};
+                var opt = {minZoom: 14, maxZoom: 17};
                 map.setOptions(opt);
                 var infoWindow = new google.maps.InfoWindow({map: map});
                 if (navigator.geolocation) {
@@ -280,20 +278,18 @@
                             icon: iconfinish
                         });
 
-                var opt = {minZoom: 15, maxZoom: 17};
+                var opt = {minZoom: 14, maxZoom: 17};
                 map.setOptions(opt);
-                //directionsDisplay.setMap(map);
-                directionsDisplay.setPanel(document.getElementById('dvDistance'));
+                //directionsDisplay.setMap(map);                
                 var string = "https://maps.googleapis.com/maps/api/directions/json?origin=" + startLat + "," + startLong + "&destination=" + lat + "," + long + "&key=AIzaSyDgDkjgoAZ7GbKexSSnDtIkBQUrLB6HHXw";
 
                 $.getJSON(string, function (data) {
                     tmp = data;
                 });
-                showDiv();
-
+                
                 // get route from A to B
-
                 calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB);
+                showDiv()
             }
 
             function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB) {
@@ -308,8 +304,8 @@
                         var distance = tmp.routes[0].legs[0].distance.text;
                         var duration = tmp.routes[0].legs[0].duration.text;
                         console.log(distance, duration)
-                        var dvDistance = document.getElementById("dvPanel");                        
-                        dvDistance.innerHTML += "<div style='length:100%;background-color:white;font-size: 19px;padding:10px'><h3>Distance : " + distance + "</h3><h3>Duration : " + duration + "</h3></div>";
+                        var dvDistance = document.getElementById("dvDistance");                         
+                        dvDistance.innerHTML += "<div style='width:100%;background-color:white;font-size: 20px;padding:10px;text-align:center;'><a href='index.php' class='btn btn-primary'>Exit Direction Mode</a><h3>Distance : " + distance + "</h3><p>Duration : " + duration + "</p></div>";
                     } else {
                         window.alert('Directions request failed due to ' + status);
                     }
@@ -318,8 +314,10 @@
             }
             
             function showDiv(){
-                var x = document.getElementById("dvPanel");
+                var x = document.getElementById("side");
+                var y = document.getElementById("dvDistance");
                 x.style.visibility = "visible";
+                y.style.visibility = "visible";
         }
 
         </script>
