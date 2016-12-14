@@ -37,17 +37,21 @@ body {
 }
 .navbar{        
     background-color:#c62828;
-    height: 80px;
+    height: 80px;    
 }
 .navbar-brand{
     color: white;
     font-size: 30px;    
 }
+a:link, a:visited {    
+    color: white;        
+    text-decoration: none;
+    display: inline-block;
+}
 
 .navbar-header{
     margin-top: 15px;
-    margin-bottom: 10px;
-    font-family: fantasy;
+    margin-bottom: 10px;    
     font-size: 28px;
     color: white;
 }
@@ -55,8 +59,7 @@ body {
 #kanan{
     margin-top: 10px;
     margin-bottom: 15px;
-    text-align: right;
-    font-family: fantasy;
+    text-align: right;    
     font-size: 18px;
     color: white;
 }
@@ -67,6 +70,7 @@ body {
 }
 
 .home{
+    position: relative;
     height: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -78,9 +82,47 @@ body {
     width: 20%;
 }
 
-.map{
-    width:80%;
+.map{    
+    position: relative;
 }
 .map-canvas{
     width:20%;
+}
+
+#dvDistance{    
+    z-index: 10;  
+    position: absolute;      
+    top:0;        
+    position:absolute;   
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.66);
+    box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.66);
+}
+
+#dvPanel{
+    visibility: hidden;
+    background-color: white;
+    z-index: 10;  
+    position: absolute;  
+    right: 0;  
+    top:0;
+    float:right; 
+    float:bottom;
+    position:absolute;    
+    width:20%;      
+    overflow-y: scroll; 
+    height:100%;
+}
+.side{
+    z-index: 10;  
+    position: absolute;  
+    right: 0;  
+    top:0;
+    float:right; 
+    float:bottom;
+    position:absolute;    
+    width:20%;      
+    overflow-y: scroll; 
+    height:100%;
 }
