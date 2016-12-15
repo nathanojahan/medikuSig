@@ -362,11 +362,11 @@
                             var icons = 'assets/hsp64.png';
                             var geoLat = json[key].geometry.location.lat;
                             var geoLng = json[key].geometry.location.lng;
-                            var distance = getDistance(geoLat, geoLng, startLat, startLong);
+                            var distance = Math.round(getDistance(geoLat, geoLng, startLat, startLong)).toFixed(2);                            
                             var content =
                                     "<div style='width:280px;'><h4>" + json[key].name + "</h4>\n\
                                 <p>" + json[key].formatted_address + "</p><p style='text-align:center;color:grey'>" + geoLat + " , " + geoLng +
-                                    "<p style='text-align:center'><button class='btn btn-primary' onclick='directionFunction(" + geoLat + "," + geoLng + ")'>Direction</button></p>";
+                                    "<h3 style='text-align:center;margin-top:-10px'>+- "+distance+" km</h3><p style='text-align:center'><button class='btn btn-primary' onclick='directionFunction(" + geoLat + "," + geoLng + ")'>Direction</button></p>";
 
                             var infowindow = new google.maps.InfoWindow()
                             infowindow.open();                            
@@ -408,7 +408,7 @@
                         Math.cos(rad(p1)) * Math.cos(rad(p3)) *
                         Math.sin(dLong / 2) * Math.sin(dLong / 2);
                 var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-                var d = (R * c) / 1000;
+                var d = (R * c) / 1000;;
                 //console.log(a, c, d);
                 return d;
             }
