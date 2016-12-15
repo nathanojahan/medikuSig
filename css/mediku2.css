@@ -81,6 +81,7 @@ a:link, a:visited {
 }
 .sidebar{
     width: 20%;
+    margin-top: 75px;
 }
 
 .map{    
