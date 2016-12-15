@@ -254,7 +254,7 @@
                         var opt = {minZoom: 14, maxZoom: 17};
                         map.setOptions(opt);
                 //directionsDisplay.setMap(map);                
-                var string = "https://maps.googleapis.com/maps/api/directions/json?origin=" + startLat + "," + startLong + "&destination=" + lat + "," + long + "&key=AIzaSyDgDkjgoAZ7GbKexSSnDtIkBQUrLB6HHXw";
+                var string = "https://maps.googleapis.com/maps/api/directions/json?origin=" + startLat + "," + startLong + "&destination=" + lat + "," + long + "&key=AIzaSyDnx6V7Xv10H-bjBbjmMRyldc2qq7x72NQ";
 
                 $.getJSON(string, function (data) {
                     tmp = data;
@@ -372,7 +372,7 @@
             };
 
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgDkjgoAZ7GbKexSSnDtIkBQUrLB6HHXw&libraries=places&callback=initAutocomplete"
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnx6V7Xv10H-bjBbjmMRyldc2qq7x72NQ&libraries=places&callback=initAutocomplete"
         async defer></script> 
 
     </body>
